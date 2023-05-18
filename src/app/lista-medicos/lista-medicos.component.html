@@ -1,0 +1,22 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+      <th scope="col">#</th>
+      <th scope="col">ID Médico</th>
+      <th scope="col">DNI</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Edad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let medico of servicio.medicos; index as i">
+      <th scope="row">{{i+1}}</th>
+      <td>{{ medico.idMedico }}</td>
+      <td>{{ medico.dni }}</td>
+      <td>{{ medico.nombre }}</td>
+      <td>{{ medico.edad }}</td>
+      <button (click)="servicio.eliminarUno(medico.idMedico)">❌</button>
+    </tr>
+  </tbody>
+  <hr>
+  <button [routerLink]="['/formulario']" routerLinkActive="router-link-active" >Añadir médico</button>

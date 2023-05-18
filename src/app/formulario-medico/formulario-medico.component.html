@@ -1,0 +1,6 @@
+<p><small>ID Medico:</small><br><input type="number" [(ngModel)]="medico.idMedico"></p>
+<p><small>DNI:</small><br><input type="text" [(ngModel)]="medico.dni"></p>
+<p><small>Nombre:</small><br><input type="text" [(ngModel)]="medico.nombre"></p>
+<p><small>Edad:</small><br><input type="number" [(ngModel)]="medico.edad"></p>
+<button [routerLink]="['/']" routerLinkActive="router-link-active" (click)="addMedico()">Mandar médico</button>
+
